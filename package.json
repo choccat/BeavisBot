@@ -1,11 +1,11 @@
 {
-    "name": "BeavisBot",
-    "description": "A customizable plug.dj room bot",
+    "name": "SmashBot",
+    "description": "SmashRoyale's Plug DJ Bot.",
     "version": "2.0.0",
     "keywords": ["turntable.fm", "turntable", "plug.dj", "plug"],
     "repository": {
         "type": "git",
-        "url": "git://github.com/AvatarKava/BeavisBot.git"
+        "url": "git://github.com/Choccat/BeavisBot.git"
     },
     "author": "Mike Burke <mburke@phpmonkeys.com>",
     "main": "bot.js",
