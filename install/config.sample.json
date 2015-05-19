@@ -26,13 +26,13 @@
         "wordnik": "wordnikApiKey"
     },
     "slack": {
-        "webhookUrl": "https://xxxxxx.slack.com/services/hooks/incoming-webhook?token=xxxxxxxxxxx",
+        "webhookUrl": "https://smashroyale.slack.com/services/hooks/incoming-webhook?token=xoxb-4954955800-NSNVQ2TsAUlMYzFIjfZSvJdb",
         "default": {
-            "channel":"#general",
+            "channel":"#plugdjbot",
             "iconUrl": ""
         },
         "pm2": {
-            "instance_name": "beavisbot",
+            "instance_name": "smashbot",
             "token": "xxx",
             "team_id": "xxx"
         }
