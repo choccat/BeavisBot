@@ -1,4 +1,4 @@
-exports.names = ['.worstdjs'];
+exports.names = ['!worstdjs'];
 exports.hidden = true;
 exports.enabled = false;
 exports.matchStart = false;
