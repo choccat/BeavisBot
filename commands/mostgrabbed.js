@@ -1,4 +1,4 @@
-exports.names = ['.mostgrabbed'];
+exports.names = ['!mostgrabbed'];
 exports.hidden = false;
 exports.enabled = false;
 exports.matchStart = false;
