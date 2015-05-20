@@ -1,6 +1,6 @@
 // busy DJs
 
-exports.names = ['.busydjs'];
+exports.names = ['!busydjs'];
 exports.hidden = false;
 exports.enabled = false;
 exports.matchStart = false;
