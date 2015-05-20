@@ -1,6 +1,6 @@
 // best DJs
 
-exports.names = ['.bestdjs'];
+exports.names = ['!bestdjs'];
 exports.hidden = false;
 exports.enabled = false;
 exports.matchStart = false;
