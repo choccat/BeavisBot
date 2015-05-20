@@ -1,4 +1,4 @@
-exports.names = ['.fixsong'];
+exports.names = ['!fixsong'];
 exports.hidden = true;
 exports.enabled = false;
 exports.matchStart = true;
@@ -7,7 +7,7 @@ exports.handler = function (data) {
         request('http://developer.echonest.com/api/v4/song/search?api_key=' + config.apiKeys.echoNest + '&format=json&results=1&combined=' + S(valueToCorrect).escapeHTML().stripPunctuation().s, function (error, response, body) {
             logger.info('echonest body', body);
             if (error) {
-                bot.sendChat('An error occurred while connecting to EchoNest.');
+                bot.sendChat('An error occurred while connecting to EchoNest. Contact an admin!');
                 logger.error('EchoNest error', error);
             } else {
                 response = JSON.parse(body).response;
@@ -22,14 +22,14 @@ exports.handler = function (data) {
     }
 
     if (config.apiKeys.echoNest == null || config.apiKeys.echoNest == '###') {
-        bot.sendChat('A valid EchoNest API key is needed to run this command.');
+        bot.sendChat('A valid EchoNest API key is needed to run this command. Contact an Admin!');
         return;
     }
 
     var input = data.message.split(' ');
 
     if (data.from.role > 1 || (data.from.id == bot.getMedia().currentDJ && input[1] != 'yes')) {
-        bot.sendChat('This command is only available to bouncers, managers, and hosts.');
+        bot.sendChat('This command is only available to bouncers, managers, co-hosts and hosts.');
         return;
     }
 
