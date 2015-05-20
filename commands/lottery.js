@@ -1,4 +1,4 @@
-exports.names = ['.lottery', '.roulette'];
+exports.names = ['!lottery', '!roulette', '!wlroulette'];
 exports.hidden = true;
 exports.enabled = true;
 exports.matchStart = true;
@@ -21,11 +21,11 @@ exports.handler = function (data) {
             mins = 1;
         }
 
-        if (input[0] === '.roulette') {
-            bot.sendChat('Wait list roulette in ' + mins + ' minutes! Join the line and chat within ' + mins + ' minutes to enter.  Winner gets moved up a random number of spots! @djs');
+        if (input[0] === '!roulette') {
+            bot.sendChat('Wait list roulette in ' + mins + ' minutes! Join the waitlist and chat within ' + mins + ' minutes to enter.  Winner gets moved up a random number of spots!');
         }
         else {
-            bot.sendChat('Wait list lottery in ' + mins + ' minutes! Join the line and chat within ' + mins + ' minutes to enter.  Winner gets the #1 spot! @djs');
+            bot.sendChat('Wait list lottery in ' + mins + ' minutes! Join the waitlist and chat within ' + mins + ' minutes to enter.  Winner gets the #1 spot! @djs');
         }
 
         setTimeout(function () {
@@ -37,7 +37,7 @@ exports.handler = function (data) {
             getActiveDJs(mins, 1, function (activeDJs) {
                 var randomNumber = _.random(1, activeDJs.length);
                 var winner = activeDJs[(randomNumber - 1)]
-                bot.sendChat(":tada: @" + winner + " emerges victorious!");
+                bot.sendChat(":tada: @" + winner + " has won!");
                 users = bot.getUsers();
                 var user = _.findWhere(users, {username: winner});
                 if (user !== undefined) {
