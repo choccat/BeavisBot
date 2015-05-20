@@ -1,4 +1,4 @@
-exports.names = ['.mostmehed', '.mostmehd'];
+exports.names = ['!mostmehed', '!mostmehd'];
 exports.hidden = true;
 exports.enabled = false;
 exports.matchStart = false;
