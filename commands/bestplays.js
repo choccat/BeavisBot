@@ -1,6 +1,6 @@
 // best plays
 
-exports.names = ['.bestplays'];
+exports.names = ['!bestplays'];
 exports.hidden = false;
 exports.enabled = false;
 exports.matchStart = false;
