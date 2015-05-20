@@ -43,12 +43,13 @@
     },
     "responses": {
         "botConnect": "I'm home honey!",
-        "freeSpin": "At DJ point milestones (500, 1000, 2000 and every 1k after), you may spin from any genre/date (still under 7 mins).  It should be played within 150 points of reaching and we call it a \"free spin\".  Check .rules for details.",
+        "freeSpin": "At DJ point milestones (500, 1000, 2000 and every 1k after), you may spin, (still under 8 mins).  It should be played within 150 points of reaching and we call it a \"free spin\".  Check .rules for details.",
         "mehReminder": "We like to maintain a positive environment.  Repeated meh'ing of songs probably means this is not the community for you and may result in a ban.",
         "mention": "",
         "welcome": {
             "newUser" : ":wave: Welcome, @{username}! Community rules: http://smashroyale.com/forums/index.php?threads/plugdj-rules.499/",
-            "oldUser" : ":wave: Welcome back, @{username}!"
+            "oldUser" : ":wave: Welcome back, @{username}!",
+            "superAdmin" : "Hello Maste @{username}!"
         },
         "rules": "Rules: http://smashroyale.com/forums/index.php?threads/plugdj-rules.499/",
         "theme": "Current Theme: EDM.",
