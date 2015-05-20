@@ -1,4 +1,4 @@
-exports.names = ['.stats'];
+exports.names = ['!stats'];
 exports.hidden = false;
 exports.enabled = false;
 exports.matchStart = false;
