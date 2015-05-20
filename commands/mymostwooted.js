@@ -1,4 +1,4 @@
-exports.names = ['.mymostwooted'];
+exports.names = ['!mymostwooted'];
 exports.hidden = false;
 exports.enabled = false;
 exports.matchStart = false;
