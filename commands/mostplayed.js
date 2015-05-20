@@ -1,4 +1,4 @@
-exports.names = ['.mostplayed'];
+exports.names = ['!mostplayed', '!mp'];
 exports.hidden = false;
 exports.enabled = false;
 exports.matchStart = false;
