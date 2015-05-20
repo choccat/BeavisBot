@@ -1,4 +1,4 @@
-exports.names = ['.ban', '.unban'];
+exports.names = ['!ban', '!unban'];
 exports.hidden = true;
 exports.enabled = false;
 exports.matchStart = true;
@@ -49,7 +49,7 @@ exports.handler = function (data) {
         //db.get('SELECT * FROM USERS LEFT JOIN DISCIPLINE USING(userid) WHERE username = ?', [username.substring(1)], function (error, row) {
         //    if (row) {
         //        switch (command) {
-        //            case '.ban':
+        //            case '!ban':
         //                bot.moderateBanUser(row.id, 0, apiDuration, function () {
         //                    logger.warning('[BAN] ' + username + ' was banned for ' + duration + ' by ' + data.from.username);
         //                    var userData = {
@@ -61,7 +61,7 @@ exports.handler = function (data) {
         //                    Karma.create(userData);
         //                });
         //                break;
-        //            case '.unban':
+        //            case '!unban':
         //                bot.moderateUnbanUser(row.userid, function () {
         //                    bot.sendChat('/me unbanning ' + username + '. This can take a few moments...');
         //                    logger.info('[UNBAN] ' + username + ' was unbanned by ' + data.from.username);
