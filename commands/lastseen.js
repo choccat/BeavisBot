@@ -1,4 +1,4 @@
-exports.names = ['.lastseen', '.seen'];
+exports.names = ['!lastseen', '!seen'];
 exports.hidden = false;
 exports.enabled = true;
 exports.matchStart = true;
@@ -6,7 +6,7 @@ exports.handler = function (data) {
 
     var params = _.rest(data.message.split(' '), 1);
     if (params.length < 1) {
-        bot.sendChat('/me usage: .lastseen username');
+        bot.sendChat('/me usage: !lastseen username');
         return;
     }
 
