@@ -1,4 +1,4 @@
-exports.names = ['.callmod'];
+exports.names = ['!callmod'];
 exports.hidden = false;
 exports.enabled = true;
 exports.matchStart = true;
@@ -10,7 +10,7 @@ exports.handler = function (data) {
         bot.sendChat('Need help? Ask a mod! No mods around? Contact a Brand Ambassador: http://plug.dj/support - Hours: http://blog.plug.dj/brand-ambassadors/');
     }
     else if(message === '') {
-        bot.sendChat('Need help? Type .callmod with the nature of your request - for example `.callmod Someone is spinning dubstep!`');
+        bot.sendChat('Need help? Type !callmod with the nature of your request - for example `!callmod Someone is playing a rude song!`');
     }
     else {
 
