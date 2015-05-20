@@ -82,10 +82,10 @@ function runBot(error, auth) {
                 RoomEvent.find({where: {starts_at: {lte: new Date()}, ends_at: {gte: new Date()}}}).on('success', function (row) {
                     if (row !== null) {
                         if (row.type == 'event') {
-                            message += ' ** SPECIAL EVENT ** ' + row.title + ' - .event for details!';
+                            message += ' *** SPECIAL EVENT *** ' + row.title + ' - !event for details!';
                         }
                         else if (row.type == 'theme') {
-                            message += ' Theme: ' + row.title + ' - .theme for details!';
+                            message += ' Theme: ' + row.title + ' - !theme for details!';
                         }
                     }
                 });
@@ -109,7 +109,7 @@ function runBot(error, auth) {
 
                 // Restore spot in line if user has been gone < 15 mins
                 var position = bot.getWaitListPosition(data.id);
-                if (!newUser && dbUser.waitlist_position > -1 && secondsSince(dbUser.last_seen) <= 900 && (position === -1 || (position > -1 && position > dbUser.waitlist_position))) {
+                if (!newUser && dbUser.waitlist_position > -1 && secondsSince(dbUser.last_seen) <= 300 && (position === -1 || (position > -1 && position > dbUser.waitlist_position))) {
                     bot.moderateAddDJ(data.id, function () {
                         if (dbUser.waitlist_position < bot.getWaitList().length && position !== dbUser.waitlist_position) {
                             bot.moderateMoveDJ(data.id, dbUser.waitlist_position);
@@ -122,7 +122,7 @@ function runBot(error, auth) {
                             Karma.create(userData);
 
                             setTimeout(function () {
-                                bot.sendChat('/me put @' + data.username + ' back in line :thumbsup:')
+                                bot.sendChat('/me Moved @' + data.username + ' back in line :thumbsup:')
                             }, 5000);
                         }
 
@@ -501,7 +501,7 @@ function runBot(error, auth) {
             logger.warning('[REMOVE] Removed ' + mehUser.username + ' from wait list for mehing');
             var position = bot.getWaitListPosition(mehUser.id);
             bot.moderateRemoveDJ(mehUser.id);
-            bot.sendChat('@' + mehUser.username + ', voting MEH/Chato/:thumbsdown: while in line is prohibited. Check .rules.');
+            bot.sendChat('@' + mehUser.username + ', voting MEH/Chato/:thumbsdown: while in line is prohibited. Check !rules.');
             var userData = {
                 type: 'remove',
                 details: 'Removed from position ' + position + ' for mehing',
